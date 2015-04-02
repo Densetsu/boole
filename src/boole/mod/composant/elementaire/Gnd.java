@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetBooleModele.composant.elementaire;
+package boole.mod.composant.elementaire;
 
-import projetBooleModele.composant.ComposantSimple;
-import projetBooleModele.composant.ComposantSimple;
+import boole.mod.Boole;
+import boole.mod.composant.ComposantSimple;
 
 /**
  *
  * @author Quentin
  */
-public class Vcc extends ComposantSimple {
+public class Gnd extends ComposantSimple {
 
-    public Vcc(int id) {
-        super(id, "Vcc");
+    public Gnd() {
+        super(0, 1, "Gnd");
         this.ajouterSortie();
     }
 
     @Override
     public void evaluer() {
-        this.getSortie(0).setEtat(Boolean.TRUE);
+        this.getSortie(0).setEtat(Boole.BAS);
     }
-    
+
 }

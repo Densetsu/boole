@@ -3,29 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetBooleModele.connectique;
+package boole.mod.connectique;
 
-import projetBooleModele.composant.Composant;
+import boole.mod.composant.Composant;
 
 /**
  *
  * @author Quentin
  */
-public class  Entree extends Port{
-    
+public class Entree extends Port {
 
-    
-    
-  public Entree(Composant pere)
-          {
-              super(pere);
-              
-          }
+    public Entree(Composant pere) {
+        super(pere);
 
- 
+    }
 
+    @Override
     public Boolean getEtat() {
         return super.getLiaison().getEtat();
     }
- 
+
 }

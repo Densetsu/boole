@@ -3,30 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetBooleModele.composant.elementaire;
+package boole.mod.composant.elementaire;
 
-import projetBooleModele.composant.ComposantSimple;
-import projetBooleModele.composant.ComposantSimple;
+import boole.mod.composant.ComposantSimple;
 
 /**
  *
  * @author Quentin
  */
-public class Ou extends ComposantSimple {
+public class Et extends ComposantSimple {
 
-     public Ou(int id) {
-        super(id, "Ou");
-        this.ajouterEntree();
-        this.ajouterEntree();
-        this.ajouterSortie();
+    public Et() {
+        super(2, 1, "Et");
     }
 
     @Override
     public void evaluer() {
         this.getSortie(0).setEtat(
                 this.getEntree(0).getLiaison().getEtat()
-                ||
+                &&
                 this.getEntree(1).getLiaison().getEtat());
     }
-    
+
 }

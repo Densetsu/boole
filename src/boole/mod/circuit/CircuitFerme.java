@@ -3,30 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetBooleModele.composant.elementaire;
+package boole.mod.circuit;
 
-import projetBooleModele.composant.ComposantSimple;
-import projetBooleModele.composant.ComposantSimple;
+import boole.mod.composant.Composant;
 
 /**
  *
  * @author Quentin
  */
-public class Itr extends ComposantSimple {
-   
-    public Itr(int id) {
-        super(id, "Itr");
-        this.ajouterSortie();
-    }
+public class CircuitFerme extends Circuit {
 
-public void evaluer(boolean etat) {
-        this.getSortie(0).setEtat(etat);
-        
+    public CircuitFerme(String nom, Composant... composants) {
+        super(0,0, nom, composants);
     }
 
     @Override
     public void evaluer() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

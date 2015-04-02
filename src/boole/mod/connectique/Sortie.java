@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetBooleModele.connectique;
+package boole.mod.connectique;
 
-import projetBooleModele.composant.Composant;
+import boole.mod.Boole;
+import boole.mod.composant.Composant;
 
 /**
  *
@@ -13,21 +14,20 @@ import projetBooleModele.composant.Composant;
  */
 public class Sortie extends Port {
 
-    private boolean etat;
+    private Boolean etat;
 
     public Sortie(Composant pere) {
         super(pere);
-
+        setEtat(Boole.DEFAULT);
     }
 
-
+    @Override
     public Boolean getEtat() {
         return etat;
     }
 
-    public void setEtat(Boolean etat) {
+    public final void setEtat(Boolean etat) {
         this.etat = etat;
     }
-    
 
 }
